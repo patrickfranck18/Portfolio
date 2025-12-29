@@ -29,57 +29,59 @@ export class PortfolioComponent {
   projects: Project[] = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      category: "Web Application",
-      image: "🛒",
-      technologies: ["Angular", "Spring Boot", "PostgreSQL", "Stripe"],
-      description: "Plateforme e-commerce complète avec gestion des produits, panier d'achat, système de paiement sécurisé et dashboard administrateur. Interface responsive et intuitive permettant une expérience utilisateur optimale.",
-      date: "2024"
+      title: "WhyNotSite",
+      category: "Application web",
+      image:"./assets/images/whynot.jpeg",
+      technologies: ["Angular", "laravel", "Mysql", "Git", "Figma", "Node.js"],
+      description: "Conception et réalisation de site web pour la vente en ligne et les annonces d'une start-up dans le domaine sportif: J'ai travaillé avec la start-up Whynot, une entreprise dynamique opérant dans le domaine de l'événementiel et de l'équipement sportif. Mon rôle principal a été de développer un site e-commerce captivant, offrant une expérience d'achat exceptionnelle aux passionnés de sport.",
+      date: "2020"
     },
     {
       id: 2,
-      title: "Dashboard Analytics",
-      category: "Data Visualization",
-      image: "📊",
-      technologies: ["React", "Node.js", "MongoDB", "Chart.js"],
-      description: "Tableau de bord analytique temps réel avec graphiques interactifs, filtres avancés et export de données. Visualisation de KPIs et métriques business avec mise à jour en temps réel.",
-      date: "2024"
+      title: "sms4entreprise",
+      category: "Dashboard entreprise",
+      image: "./assets/images/sms4entreprise.jpg",
+      technologies: ["Angular", "Node.js", "SpringBoot", "Mysql", "Git"],
+      description: "Conception d'une application d'envoie d'sms en masse: Pendant mon stage de fin d'études (PFE), j'ai eu l'opportunité passionnante de travailler avec SFM-Technologie, une entreprise spécialisée dans les domaines de l'intelligence artificielle, des télécommunications et des technologies de l'information. Mon projet principal a été de développer une application d'envoi d'SMS en masse, offrant à SFM-Technologie un outil puissant pour communiquer efficacement avec ses utilisateurs et clients.",
+      date: "2021"
     },
     {
       id: 3,
-      title: "Task Management App",
-      category: "Productivity",
-      image: "✅",
-      technologies: ["Vue.js", "Firebase", "Vuetify"],
-      description: "Application de gestion de tâches collaborative avec système de notifications, attribution de tâches, calendrier intégré et suivi de progression. Interface drag & drop intuitive.",
+      title: "Rentacar",
+      category: "Développement web",
+      image: "./assets/images/rentacar.png",
+      technologies: ["Angular", "MongoDB", "Node.js", "Express"],
+      description: "Site d'annonce de vente et de location: J'ai eu à développer un site d'annonces et de vente similaire à \"Le Bon Coin\" dans le cadre d'un projet personnel. Ce projet a été réalisé de manière autonome, me permettre de mettre en pratique mes compétences en développement web et de créer une plateforme complète et fonctionnelle pour les utilisateurs souhaitant acheter ou vendre des produits.",
       date: "2023"
     },
     {
       id: 4,
-      title: "Social Network",
-      category: "Social Media",
-      image: "💬",
-      technologies: ["Angular", "NestJS", "Socket.io", "Redis"],
-      description: "Réseau social avec messagerie instantanée, fil d'actualités, système de likes et commentaires, partage de médias et notifications en temps réel. Architecture scalable et performante.",
-      date: "2023"
+      title: "AppStage",
+      category: "Application web",
+      image: "./assets/images/appstage.PNG",
+      technologies: ["SpringBoot", "java", "MySQL"],
+      description: "Développement Backend : Conception de modules de gestion robustes en utilisant l'architecture MVC. Optimisation de requêtes SQL et modélisation de schémas relationnels. ",
+      date: "2022"
     },
+
     {
       id: 5,
+      title: "Portfolio",
+      category: "Site de prise de contact",
+      image: "./assets/images/portfolio.PNG",
+      technologies: ["Angular", "Node.js", "TypeScript", "JavaScript"],
+      description: "Identité Numérique : Création et déploiement d’une vitrine interactive pour exposer mes projets et mon code source. Design responsive et hébergement automatisé via GitHub.",
+      date: "2025"
+    },
+
+    {
+      id: 6,
       title: "Booking System",
       category: "Web Application",
-      image: "📅",
+      image: "./assets/images/slider1.jpg",
       technologies: ["React", "Express", "MySQL", "Stripe"],
       description: "Système de réservation en ligne avec calendrier interactif, gestion des disponibilités, paiement intégré et envoi automatique de confirmations par email. Interface administrateur complète.",
       date: "2023"
-    },
-    {
-      id: 6,
-      title: "Portfolio CMS",
-      category: "Content Management",
-      image: "🎨",
-      technologies: ["Angular", "Strapi", "PostgreSQL"],
-      description: "Système de gestion de contenu pour portfolios créatifs avec éditeur visuel, gestion de médias, SEO optimisé et thèmes personnalisables. Interface d'administration intuitive.",
-      date: "2024"
     }
   ];
 

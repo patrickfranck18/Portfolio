@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 @Component({
@@ -7,6 +8,7 @@ import { IonicModule } from '@ionic/angular';
   templateUrl: './home.component.html',
   standalone: true,
   imports: [
+    RouterLink,
     CommonModule, 
     IonicModule
   ],

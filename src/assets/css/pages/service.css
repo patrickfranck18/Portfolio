@@ -10,13 +10,40 @@
   display: grid;
   gap: 25px;
   grid-auto-rows: 1fr;
+  
 }
 
-.card-title { margin-block-end: 10px; }
+.card-title { margin-block-end: 10px; color:rgb(180, 194, 176);}
 
 .card ion-icon { font-size: 3.2rem; }
 
-.card .body-sm { color: var(--jet); }
+.card .body-sm { color: var(--jet); color:rgb(180, 194, 176);}
+
+
+
+
+
+
+/* Le calque de l'image de fond (commun à toutes les cartes) */
+.card-md::before {
+  overflow: hidden;
+  content: "";
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: -1; /* Derrière le texte et le dégradé */
+  opacity: 0.4; /* Intensité de l'image de fond */
+  mix-blend-mode: overlay; /* Fusionne joliment avec ton dégradé orange/bleu */
+}
+
+/* Attribution des images spécifiques (remplace par tes chemins réels) */
+.bg-fullstack::before { background-image: url('/assets/images/devweb.jpg'); }
+.bg-ui::before        { background-image: url('/assets/images/ui.jpg'); }
+.bg-maintenance::before { background-image: url('/assets/images/maintenance.jpg'); }
+.bg-responsive::before  { background-image: url('/assets/images/responsive.jpg'); }
+.bg-photoshop::before   { background-image: url('/assets/images/photoshop.jpg'); }
+.bg-api::before         { background-image: url('/assets/images/ui.jpg'); }
 
 .card-md { 
   background: linear-gradient(135deg, hsl(210, 40%, 35%), hsl(19, 100%, 55%));
@@ -30,6 +57,7 @@
   justify-content: center;
   justify-content: flex-start;
   height: 100%;
+  overflow: hidden;
   
 }
 

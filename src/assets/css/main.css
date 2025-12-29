@@ -6,6 +6,7 @@
 
 
 .about-banner {
+  padding-top: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,7 +14,7 @@
 }
 
 .avatar-floating {
-  width: 100%;
+  width: 100%; 
   height: auto;
   max-width: 500px; /* Ajuste cette valeur pour que l'image soit nette */
   
@@ -26,7 +27,7 @@
 
 /* Définition du mouvement */
 @keyframes floatAnimation {
-  0% {
+  0% { 
     transform: translateY(0px);
   }
   50% {
@@ -40,11 +41,30 @@
 
 
 
-.header { background-color: var(--black); box-shadow: var(--shadow); }
+.header { 
+ background-color: transparent; /* Supprime la couleur de fond */
+  position: fixed; /* Indispensable pour qu'elle reste au-dessus du contenu au scroll */
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  border: none; /* Enlève les bordures éventuelles */
+  
+}
+
+.header.scrolled {
+  background-color: var(--black);
+  transition: background-color 0.3s ease;
+}
 
 .hero {
   position: relative;
-  background-color: var(--maximum-yellow-red_a10);
+  /* Utilise 'background' et non 'background-color' */
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/images/slider2.webp') no-repeat center !important;
+  background-size: cover !important;
+  
+  min-height: 500px; 
+  width: 100%;
+  display: block;
   padding-block-start: calc(var(--section-padding) + 60px);
   text-align: center;
   overflow: hidden;
@@ -69,8 +89,8 @@
   transform: translateY(2px);
 }
 
-
-.hero::after {
+/*décoration*/
+/*.hero::after {
   content: "";
   position: absolute;
   top: 0;
@@ -81,15 +101,35 @@
   transform: rotate(-45deg);
   border-radius: var(--radius-50);
   z-index: -1;
-}
+}*/
 
 .hero .container {
-  display: grid;
-  gap: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around; /* Mieux que space-between pour l'équilibre */
+  flex-wrap: wrap; 
+  gap: 40px; /* Espace minimal entre le texte et l'ordinateur */
+}
+.hero-content {
+  flex: 1;
+  min-width: 300px; /* Empêche le texte de devenir trop étroit */
+  text-align: left; /* Aligne le texte à gauche sur PC */
+}
+
+/* Sur Mobile : On centre tout */
+@media (max-width: 992px) {
+  .hero-content {
+    text-align: center;
+    order: 1; /* Le texte reste en haut */
+  }
+  .laptop-container {
+    order: 2; /* L'ordinateur passe en dessous */
+    width: 320px; /* Plus petit sur mobile */
+    height: 240px;
+  }
 }
 
 .hero-subtitle {
-  color: var(--jet);
   text-transform: uppercase;
   font-weight: var(--fw-600);
   letter-spacing: 3px;
@@ -108,13 +148,18 @@
 
 
 .laptop-container {
-  position: absolute;
-  right: 10%;
-  bottom: 10%;
-  width: 480px;    
+  /* Supprime position: absolute */
+  position: relative; 
+  /* Supprime right: 10% et bottom: 10% */
+  
+  width: 100%; /* Permet la flexibilité */
+  max-width: 480px; /* Taille max sur grand écran */
   height: 360px;
   perspective: 1200px;
   z-index: 5;
+  
+  /* Centre l'ordinateur sur mobile si nécessaire */
+  margin-inline: auto; 
 }
 
 .laptop {
@@ -138,69 +183,16 @@
 }
 
 
-.screen::after {
-  content: "";
-  position: absolute;
-  right: 18px;
-  top: 18px;
-  width: 68px;
-  height: 68px;
-  z-index: 8;
-  pointer-events: none;
-  background-image: url("data:image/svg+xml;utf8,\
-  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'>\
-    <defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='%23ffd07a'/><stop offset='1' stop-color='%23ff7aa6'/></linearGradient></defs>\
-    <rect x='4' y='8' width='56' height='40' rx='6' fill='url(%23g)' stroke='%23001314' stroke-opacity='0.12'/>\
-    <rect x='10' y='14' width='44' height='28' rx='3' fill='%2300141c' />\
-    <g fill='%23bde8ff' opacity='0.95'>\
-      <rect x='14' y='18' width='22' height='2' rx='1'/>\
-      <rect x='14' y='22' width='30' height='2' rx='1'/>\
-      <rect x='14' y='26' width='18' height='2' rx='1'/>\
-    </g>\
-    <circle cx='50' cy='12' r='5' fill='%23fff' fill-opacity='0.12'/>\
-  </svg>");
-  background-size: contain;
-  background-repeat: no-repeat;
-  filter: drop-shadow(0 8px 16px rgba(0,0,0,0.45));
-  transform: translateZ(20px) rotate(-4deg);
-  opacity: 0.98;
-}
+
 
 /* screen glow, subtle scanlines and flicker */
-.screen-glow {
-  position:absolute;
-  inset:0;
-  pointer-events:none;
-  z-index:2;
-  background:
-    radial-gradient(40% 30% at 12% 14%, rgba(91,178,255,0.09), transparent 10%),
-    radial-gradient(30% 20% at 82% 22%, rgba(255,110,120,0.04), transparent 8%),
-    linear-gradient(180deg, rgba(255,255,255,0.01), rgba(0,0,0,0.12));
-  mix-blend-mode: screen;
-  animation: glowFlicker 6s infinite;
-}
+
 
 /* thin scanline overlay for retro-coding look */
-.screen::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 4;
-  background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px);
-  background-size: 100% 6px;
-  mix-blend-mode: overlay;
-  pointer-events: none;
-  opacity: 0.6;
-}
+
 
 /* subtle flicker keyframes */
-@keyframes glowFlicker {
-  0% { opacity: 1; transform: translateY(0); }
-  20% { opacity: 0.96; }
-  50% { opacity: 1; transform: translateY(-1px); }
-  80% { opacity: 0.98; }
-  100% { opacity: 1; transform: translateY(0); }
-}
+
 @keyframes laptopFloat {
   0% {
     transform: translateY(0px) rotateX(0deg);
@@ -365,25 +357,108 @@
 
 
 
-
-.skill { padding-block-end: 0; }
-
-.skill .container,
-.skill-list { display: grid; }
-
-.skill .container { gap: 50px; }
-
-.skill-list {
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
+/* Structure de la liste */
+/* 1. Le conteneur qui sépare Gauche (Cartes) et Droite (Texte) */
+.skills-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
 }
 
-.skill .card ion-icon { font-size: 3rem; }
+/* 2. La partie gauche qui occupe 60% de l'espace */
+.skills-left {
+  flex: 1.5;
+}
 
-.skill .card .card-title {
-  color: var(--jet);
-  font-size: 1.6rem;
-  font-weight: var(--fw-500);
+/* 3. La grille 2 par 2 */
+.skill-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 colonnes égales */
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* 4. Style des cartes individuelles */
+.card {
+  background: #ffffff;
+  border: 1px solid #e1e1e1;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.card-media {
+  font-size: 32px;
+  display: flex;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+/* 5. La partie droite (Texte) */
+.skills-right {
+  flex: 1;
+}
+
+.headline-lg {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* 6. Couleurs des icônes */
+.card-mongodb .card-media { color: #47A248; }
+.card-express .card-media { color: #1a1b1a; }
+.card-angular .card-media  { color: #DD0031; }
+.card-nodejs .card-media   { color: #339933; }
+.card-php .card-media      { color: #777BB4; }
+.card-java .card-media     { color: #ED8B00; }
+.card-python .card-media   { color: #3776AB; }
+
+/* 7. Responsive : On passe à 1 colonne sur mobile */
+@media (max-width: 992px) {
+  .skills-container {
+    flex-direction: column-reverse; /* Texte au-dessus des cartes */
+    text-align: center;
+  }
+  .skill-list {
+    grid-template-columns: 1fr 1fr; /* Reste en 2 par 2 sur tablette */
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .skill-list {
+    grid-template-columns: 1fr; /* 1 colonne sur téléphone */
+  }
+}
+
+.section-text {
+  font-size: 2rem;
+  line-height: 1.5; /* Donne de l'air entre les lignes */
+  color: #444;
+  max-width: 700px;
+  margin-bottom: 40px;
+  border-left: 2px solid hsl(41, 99%, 64%); /* Petite barre colorée sur le côté pour l'élégance */
+  padding-left: 20px;
 }
 
 
@@ -426,7 +501,6 @@
 }
 
 .testi .card::after {
-  content: url("../images/quote-left.svg");
   position: absolute;
   bottom: 15px;
   right: 25px;

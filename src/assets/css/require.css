@@ -159,10 +159,19 @@ body.loaded { overflow: visible; }
 .label-md { font-size: var(--fs-12); }
 
 
+.hero-subtitle,
+.hero-text{
+    color: rgb(180, 194, 176);
+}
 
 .headline-lg,
+.headline-sm{
+    color: rgb(180, 194, 176);
+  font-weight: var(--fw-600);
+  line-height: 1.2;
+}
+
 .headline-md,
-.headline-sm,
 .title-lg,
 .title-md,
 .title-sm,
