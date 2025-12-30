@@ -38,13 +38,12 @@
 }
 
 /* Attribution des images spécifiques (remplace par tes chemins réels) */
-.bg-fullstack::before { background-image: url('/assets/images/devweb.jpg'); }
-.bg-ui::before        { background-image: url('/assets/images/ui.jpg'); }
-.bg-maintenance::before { background-image: url('/assets/images/maintenance.jpg'); }
-.bg-responsive::before  { background-image: url('/assets/images/responsive.jpg'); }
-.bg-photoshop::before   { background-image: url('/assets/images/photoshop.jpg'); }
-.bg-api::before         { background-image: url('/assets/images/ui.jpg'); }
-
+.bg-fullstack::before { background-image: url('../../../assets/images/devweb.jpg'); }
+.bg-ui::before        { background-image: url('../../../assets/images/ui.jpg'); }
+.bg-maintenance::before { background-image: url('../../../assets/images/maintenance.jpg'); }
+.bg-responsive::before  { background-image: url('../../../assets/images/responsive.jpg'); }
+.bg-photoshop::before   { background-image: url('../../../assets/images/photoshop.jpg'); }
+.bg-api::before         { background-image: url('../../../assets/images/ui.jpg'); }
 .card-md { 
   background: linear-gradient(135deg, hsl(210, 40%, 35%), hsl(19, 100%, 55%));
   padding: 60px 40px;
