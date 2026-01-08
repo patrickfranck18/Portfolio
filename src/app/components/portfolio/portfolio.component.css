@@ -55,7 +55,7 @@
 
 .project-image {
   width: 100%;
-  height: 100%; /* Ou la hauteur que tu souhaites */
+  height: 100%; 
   overflow: hidden;
   background: linear-gradient(135deg, hsl(210, 40%, 35%), hsl(19, 100%, 55%));
   display: flex;
@@ -67,15 +67,15 @@
 .project-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* C'est LA propriété magique pour que l'image ne soit pas écrasée */
+  object-fit: cover; 
   transition: transform 0.5s ease;
 }
 
 .project-card:hover .project-image img {
-  transform: scale(1.1); /* Petit effet de zoom au survol */
+  transform: scale(1.1); 
 }
 
-/* Pour l'image dans la modale */
+
 .modal-img-small {
   width: 100%;
   height: 100%;
@@ -156,9 +156,9 @@
 }
 
 .modal-banner {
-  position: relative; /* Indispensable pour que le texte se base sur ce cadre */
+  position: relative; 
   width: 100%;
-  height: 350px; /* Ajuste selon tes besoins */
+  height: 350px; 
 }
 
 .modal-banner img {
@@ -173,14 +173,14 @@
   left: 0;
   right: 0;
   padding: 30px;
-  /* Dégradé noir transparent pour la lisibilité du texte blanc */
+  
   background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
   color: white;
 }
 
 .banner-overlay-text h2 {
   
-  color: white; /* On force en blanc car sur l'image */
+  color: white; 
   font-size: 2rem;
   margin-bottom: 10px;
   font-weight: 700;

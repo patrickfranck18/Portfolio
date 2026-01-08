@@ -16,25 +16,25 @@
 .avatar-floating {
   width: 100%; 
   height: auto;
-  max-width: 500px; /* Ajuste cette valeur pour que l'image soit nette */
+  max-width: 500px; 
   
-  /* On lance l'animation : 3 secondes, mouvement fluide, à l'infini */
+  
   animation: floatAnimation 3s ease-in-out infinite;
   
-  /* Optionnel : Ajoute une petite ombre portée qui change aussi */
+  
   filter: drop-shadow(0 20px 15px rgba(0,0,0,0.3));
 }
 
-/* Définition du mouvement */
+
 @keyframes floatAnimation {
   0% { 
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-20px); /* L'avatar monte de 20 pixels */
+    transform: translateY(-20px); 
   }
   100% {
-    transform: translateY(0px); /* L'avatar redescend */
+    transform: translateY(0px); 
   }
 }
 
@@ -42,12 +42,12 @@
 
 
 .header { 
- background-color: transparent; /* Supprime la couleur de fond */
-  position: fixed; /* Indispensable pour qu'elle reste au-dessus du contenu au scroll */
+ background-color: transparent; 
+  position: fixed; 
   width: 100%;
   top: 0;
   z-index: 1000;
-  border: none; /* Enlève les bordures éventuelles */
+  border: none; 
   
 }
 
@@ -58,8 +58,8 @@
 
 .hero {
   position: relative;
-  /* Utilise 'background' et non 'background-color' */
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/images/slider2.webp') no-repeat center !important;
+  
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/images/slider2.webp') no-repeat center !important;
   background-size: cover !important;
   
   min-height: 500px; 
@@ -89,7 +89,7 @@
   transform: translateY(2px);
 }
 
-/*décoration*/
+
 /*.hero::after {
   content: "";
   position: absolute;
@@ -106,25 +106,25 @@
 .hero .container {
   display: flex;
   align-items: center;
-  justify-content: space-around; /* Mieux que space-between pour l'équilibre */
+  justify-content: space-around; 
   flex-wrap: wrap; 
-  gap: 40px; /* Espace minimal entre le texte et l'ordinateur */
+  gap: 40px; 
 }
 .hero-content {
   flex: 1;
-  min-width: 300px; /* Empêche le texte de devenir trop étroit */
-  text-align: left; /* Aligne le texte à gauche sur PC */
+  min-width: 300px; 
+  text-align: left; 
 }
 
-/* Sur Mobile : On centre tout */
+
 @media (max-width: 992px) {
   .hero-content {
     text-align: center;
-    order: 1; /* Le texte reste en haut */
+    order: 1; 
   }
   .laptop-container {
-    order: 2; /* L'ordinateur passe en dessous */
-    width: 320px; /* Plus petit sur mobile */
+    order: 2; 
+    width: 320px; 
     height: 240px;
   }
 }
@@ -148,17 +148,17 @@
 
 
 .laptop-container {
-  /* Supprime position: absolute */
-  position: relative; 
-  /* Supprime right: 10% et bottom: 10% */
   
-  width: 100%; /* Permet la flexibilité */
-  max-width: 480px; /* Taille max sur grand écran */
+  position: relative; 
+  
+  
+  width: 100%; 
+  max-width: 480px; 
   height: 360px;
   perspective: 1200px;
   z-index: 5;
   
-  /* Centre l'ordinateur sur mobile si nécessaire */
+  
   margin-inline: auto; 
 }
 
@@ -166,7 +166,7 @@
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
-  /* On s'assure que l'animation est bien appliquée ici */
+  
   animation: laptopFloat 5s ease-in-out infinite; 
 }
 
@@ -185,20 +185,20 @@
 
 
 
-/* screen glow, subtle scanlines and flicker */
 
 
-/* thin scanline overlay for retro-coding look */
 
 
-/* subtle flicker keyframes */
+
+
+
 
 @keyframes laptopFloat {
   0% {
     transform: translateY(0px) rotateX(0deg);
   }
   50% {
-    transform: translateY(-25px) rotateX(2deg); /* Monte de 25px et s'incline un peu */
+    transform: translateY(-25px) rotateX(2deg); 
   }
   100% {
     transform: translateY(0px) rotateX(0deg);
@@ -357,8 +357,8 @@
 
 
 
-/* Structure de la liste */
-/* 1. Le conteneur qui sépare Gauche (Cartes) et Droite (Texte) */
+
+
 .skills-container {
   display: flex;
   align-items: center;
@@ -369,22 +369,22 @@
   padding: 60px 20px;
 }
 
-/* 2. La partie gauche qui occupe 60% de l'espace */
+
 .skills-left {
   flex: 1.5;
 }
 
-/* 3. La grille 2 par 2 */
+
 .skill-list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 colonnes égales */
+  grid-template-columns: repeat(2, 1fr); 
   gap: 20px;
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-/* 4. Style des cartes individuelles */
+
 .card {
   background: #ffffff;
   border: 1px solid #e1e1e1;
@@ -414,7 +414,7 @@
   margin: 0;
 }
 
-/* 5. La partie droite (Texte) */
+
 .skills-right {
   flex: 1;
 }
@@ -424,7 +424,7 @@
   margin-bottom: 20px;
 }
 
-/* 6. Couleurs des icônes */
+
 .card-mongodb .card-media { color: #47A248; }
 .card-express .card-media { color: #1a1b1a; }
 .card-angular .card-media  { color: #DD0031; }
@@ -433,31 +433,31 @@
 .card-java .card-media     { color: #ED8B00; }
 .card-python .card-media   { color: #3776AB; }
 
-/* 7. Responsive : On passe à 1 colonne sur mobile */
+
 @media (max-width: 992px) {
   .skills-container {
-    flex-direction: column-reverse; /* Texte au-dessus des cartes */
+    flex-direction: column-reverse; 
     text-align: center;
   }
   .skill-list {
-    grid-template-columns: 1fr 1fr; /* Reste en 2 par 2 sur tablette */
+    grid-template-columns: 1fr 1fr; 
     width: 100%;
   }
 }
 
 @media (max-width: 600px) {
   .skill-list {
-    grid-template-columns: 1fr; /* 1 colonne sur téléphone */
+    grid-template-columns: 1fr; 
   }
 }
 
 .section-text {
   font-size: 2rem;
-  line-height: 1.5; /* Donne de l'air entre les lignes */
+  line-height: 1.5; 
   color: #444;
   max-width: 700px;
   margin-bottom: 40px;
-  border-left: 2px solid hsl(41, 99%, 64%); /* Petite barre colorée sur le côté pour l'élégance */
+  border-left: 2px solid hsl(41, 99%, 64%); 
   padding-left: 20px;
 }
 

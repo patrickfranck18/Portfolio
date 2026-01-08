@@ -14,6 +14,8 @@
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": "dist/angfolio2",
+            "baseHref": "/Portfolio/",
+            "deployUrl": "/Portfolio/",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [

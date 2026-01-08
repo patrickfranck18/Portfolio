@@ -1,5 +1,4 @@
 import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
-// 1. On retire withAnchorScrolling de l'import car il n'existe pas en tant que tel
 import { provideRouter, withHashLocation, withInMemoryScrolling } from '@angular/router'; 
 import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
@@ -16,8 +15,6 @@ export const appConfig: ApplicationConfig = {
     provideIonicAngular({}),
     provideRouter(
       routes,
-      //withHashLocation(),
-      // 2. On configure anchorScrolling ICI, à l'intérieur de withInMemoryScrolling
       withInMemoryScrolling({ 
         scrollPositionRestoration: 'enabled',
         anchorScrolling: 'enabled' 

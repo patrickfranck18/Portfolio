@@ -175,3 +175,65 @@
 .btn-cv:active {
   transform: translateY(-1px);
 }
+
+
+@media screen and (max-width: 992px) {
+  
+  .timeline {
+    width: 95% !important;
+    margin-left: 10px !important;
+  }
+
+  
+  .timeline::before {
+    left: 40px !important; 
+    transform: none !important;
+  }
+
+  
+  .timeline .timeline-item {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important; 
+    justify-content: flex-start !important;
+    padding: 40px 0 !important;
+  }
+
+  
+  .timeline .timeline-circle {
+    position: relative !important;
+    left: 40px !important; 
+    transform: translateX(-50%) !important;
+    flex-shrink: 0 !important; 
+    width: 80px !important;
+    height: 80px !important;
+    margin: 0 !important;
+    z-index: 5 !important;
+  }
+
+  
+  .timeline .timeline-content {
+    width: auto !important;
+    flex: 1 !important;
+    padding-left: 60px !important; 
+    text-align: left !important;
+  }
+
+  
+  .timeline .timeline-item.left {
+    flex-direction: row !important;
+  }
+
+  
+  .timeline-start {
+    justify-content: flex-start !important;
+    padding-left: 0 !important;
+  }
+
+  .timeline-circle.start {
+    left: 40px !important;
+    transform: translateX(-50%) !important;
+    width: 80px !important;
+    height: 80px !important;
+  }
+}

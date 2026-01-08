@@ -1,21 +1,15 @@
 <section id="portfolio-section" class="portfolio-section">
-  <!-- Header -->
+  
   <h1>MES RÉALISATIONS</h1>
   <p class="intro">Découvrez une sélection de mes projets récents</p>
-
-  <!-- Grille de projets -->
   <div class="portfolio-grid">
     <div 
       *ngFor="let project of projects" 
       class="project-card"
-      (click)="openModal(project)"
-    >
-      <!-- Image de fond -->
+      (click)="openModal(project)">
       <div class="project-image">
   <img [src]="project.image" [alt]="project.title" class="img-fluid">
 </div>
-
-      <!-- Overlay au survol -->
       <div class="project-overlay">
         <h3>{{ project.title }}</h3>
         <p class="category">{{ project.category }}</p>
@@ -25,11 +19,9 @@
   </div>
 </section>
 
-
 <div *ngIf="selectedProject" class="modal-backdrop" (click)="closeModal()">
   <div class="modal-content" (click)="$event.stopPropagation()">
     
-    <!-- Header modal -->
     <div class="modal-banner">
   <img [src]="selectedProject.image" [alt]="selectedProject.title">
   
@@ -40,18 +32,13 @@
 
   <button class="btn-close" (click)="closeModal()">×</button>
 </div>
-
-    <!-- Contenu modal -->
     <div class="modal-body">
-      <!-- Description -->
       <div class="section">
-        <h3>📝 Description</h3>
+        <h3>Description</h3>
         <p>{{ selectedProject.description }}</p>
       </div>
-
-      <!-- Technologies -->
       <div class="section">
-        <h3>🛠️ Technologies utilisées</h3>
+        <h3>Technologies utilisées</h3>
         <div class="tech-tags">
           <span *ngFor="let tech of selectedProject.technologies" class="tag">
             {{ tech }}
