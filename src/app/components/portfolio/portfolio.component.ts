@@ -31,7 +31,7 @@ export class PortfolioComponent {
       id: 1,
       title: "WhyNotSite",
       category: "Application web",
-      image:"assets/images/whynot.jpeg",
+      image:"assets/images/whynot.PNG",
       technologies: ["Angular", "laravel", "Mysql", "Git", "Figma", "Node.js"],
       description: "Conception et réalisation de site web pour la vente en ligne et les annonces d'une start-up dans le domaine sportif: J'ai travaillé avec la start-up Whynot, une entreprise dynamique opérant dans le domaine de l'événementiel et de l'équipement sportif. Mon rôle principal a été de développer un site e-commerce captivant, offrant une expérience d'achat exceptionnelle aux passionnés de sport.",
       date: "2020"
