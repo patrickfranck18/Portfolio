@@ -28,7 +28,7 @@ export class PortfolioComponent {
 
   projects: Project[] = [
     {
-      id: 1,
+      id: 2,
       title: "WhyNotSite",
       category: "Application web",
       image:"assets/images/whynot.PNG",
@@ -37,7 +37,7 @@ export class PortfolioComponent {
       date: "2020"
     },
     {
-      id: 2,
+      id: 6,
       title: "sms4entreprise",
       category: "Dashboard entreprise",
       image: "assets/images/sms4entreprise.jpg",
@@ -75,12 +75,12 @@ export class PortfolioComponent {
     },
 
     {
-      id: 6,
-      title: "Booking System",
+      id: 1,
+      title: "MKM R'",
       category: "Web Application",
-      image: "assets/images/slider1.jpg",
-      technologies: ["React", "Express", "MySQL", "Stripe"],
-      description: "Système de réservation en ligne avec calendrier interactif, gestion des disponibilités, paiement intégré et envoi automatique de confirmations par email. Interface administrateur complète.",
+      image: "assets/images/archi.png",
+      technologies: ["Angular", "Express.js", "Supabase", "Node.js", "PostgreSQL"],
+      description: "Actuellement entrain de développer un cabinet d'architecture en ligne pour le compte d'une PME française, qui permettra aux différents collaborateurs de consulter les projets, demander un devis, suivre l'avancement du projet et plus",
       date: "2023"
     }
   ];
