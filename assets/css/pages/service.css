@@ -1,0 +1,76 @@
+@import url('../components/card.css');
+@import url('../components/btn.css');
+
+
+.service { padding-block-start: calc(var(--section-padding) + 10px);
+    background-color: var(--maximum-yellow-red_a10);
+        }
+
+.service-list {
+  display: grid;
+  gap: 25px;
+  grid-auto-rows: 1fr;
+  
+}
+
+.card-title { margin-block-end: 10px; color:rgb(180, 194, 176);}
+
+.card ion-icon { font-size: 3.2rem; }
+
+.card .body-sm { color: var(--jet); color:rgb(180, 194, 176);}
+
+
+
+
+
+
+
+.card-md::before {
+  overflow: hidden;
+  content: "";
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: -1; 
+  opacity: 0.4; 
+  mix-blend-mode: overlay; 
+}
+
+
+.bg-fullstack::before { background-image: url('../../../assets/images/devweb.jpg'); }
+.bg-ui::before        { background-image: url('../../../assets/images/ui.jpg'); }
+.bg-maintenance::before { background-image: url('../../../assets/images/maintenance.jpg'); }
+.bg-responsive::before  { background-image: url('../../../assets/images/responsive.jpg'); }
+.bg-photoshop::before   { background-image: url('../../../assets/images/photoshop.jpg'); }
+.bg-api::before         { background-image: url('../../../assets/images/ui.jpg'); }
+.card-md { 
+  background: linear-gradient(135deg, hsl(210, 40%, 35%), hsl(19, 100%, 55%));
+  padding: 60px 40px;
+  border-radius: 20px 20px 20px 20px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-content: flex-start;
+  height: 100%;
+  overflow: hidden;
+  
+}
+
+.card-container {
+  display: flex; 
+  height: 100%; 
+}
+
+
+
+
+
+@media (min-width: 768px) {
+
+  .service-list { grid-template-columns: 1fr 1fr; }
+
+}
