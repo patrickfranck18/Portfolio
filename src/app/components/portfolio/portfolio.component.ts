@@ -68,7 +68,7 @@ export class PortfolioComponent {
       id: 5,
       title: "Portfolio",
       category: "Site de prise de contact",
-      image: "assets/images/portfolio.PNG",
+      image: "assets/images/cut-prtflio.PNG",
       technologies: ["Angular", "Node.js", "TypeScript", "JavaScript"],
       description: "Identité Numérique : Création et déploiement d’une vitrine interactive pour exposer mes projets et mon code source. Design responsive et hébergement automatisé via GitHub.",
       date: "2025"
