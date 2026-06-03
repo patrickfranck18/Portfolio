@@ -28,7 +28,7 @@ export class PortfolioComponent {
 
   projects: Project[] = [
     {
-      id: 2,
+      id: 3,
       title: "WhyNotSite",
       category: "Application web",
       image:"assets/images/whynot.PNG",
@@ -46,21 +46,21 @@ export class PortfolioComponent {
       date: "2021"
     },
     {
-      id: 3,
-      title: "Rentacar",
+      id: 1,
+      title: "FacturaPro",
       category: "Développement web",
-      image: "assets/images/rentacar.png",
-      technologies: ["Angular", "MongoDB", "Node.js", "Express"],
-      description: "Site d'annonce de vente et de location: J'ai eu à développer un site d'annonces et de vente similaire à \"Le Bon Coin\" dans le cadre d'un projet personnel. Ce projet a été réalisé de manière autonome, me permettre de mettre en pratique mes compétences en développement web et de créer une plateforme complète et fonctionnelle pour les utilisateurs souhaitant acheter ou vendre des produits.",
-      date: "2023"
+      image: "assets/images/factura.png",
+      technologies: ["React", "Supabase", "Tailwind CSS", "PostgreSQL", "Node.js", "Git", "JavaScript"],
+      description: "Application de facturation en ligne : J'ai développé une application de facturation en ligne pour PME, petits entrepreneurs ou freelancers, permettant la création, la gestion et l'envoi de factures électroniques. Intégration de fonctionnalités de suivi des paiements et de génération de rapports financiers.",
+      date: "2026"
     },
     {
       id: 4,
-      title: "AppStage",
+      title: "archi-ops",
       category: "Application web",
-      image: "assets/images/appstage.PNG",
-      technologies: ["SpringBoot", "java", "MySQL"],
-      description: "Développement Backend : Conception de modules de gestion robustes en utilisant l'architecture MVC. Optimisation de requêtes SQL et modélisation de schémas relationnels. ",
+      image: "assets/images/cvfactory.jpg",
+      technologies: ["Angular", "TypeScript", "Tailwind CSS", "Node.js", "Git"],
+      description: "ArchiOps est une console de pilotage de performance locale conçue pour les développeurs et architectes solutions. Elle centralise la gestion des missions critiques et la génération de documentation technique (CV Factory). ",
       date: "2022"
     },
 
@@ -75,7 +75,7 @@ export class PortfolioComponent {
     },
 
     {
-      id: 1,
+      id: 2,
       title: "MKM R'",
       category: "Web Application",
       image: "assets/images/archi.png",
